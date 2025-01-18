@@ -1,10 +1,7 @@
 #basic gradient descent
-# 
 
 import numpy as np
 import matplotlib.pyplot as plt
-
-
 
 np.random.seed(42)
 x = 2 * np.random.rand(100,1) #inputs
@@ -46,12 +43,10 @@ plt.ylabel('cost')
 plt.title('decreasing cost function')
 plt.show()
 
-
 sorted_indices = np.argsort(x.flatten())
 x_sorted = x[sorted_indices]
 y_sorted = y[sorted_indices]
 y_pred_sorted = (w * x + b)[sorted_indices]
-
 
 plt.scatter(x_sorted, y_sorted, color='blue', label='Data')
 plt.plot(x_sorted, y_pred_sorted, color='red', label='Model')
